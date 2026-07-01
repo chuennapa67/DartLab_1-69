@@ -1,0 +1,12 @@
+void main(){
+  String say(String from, String msg, [String? device]) {
+  var result = '$from says $msg';
+  if (device != null) {
+    result = '$result with a $device';
+  }
+  return result;
+  }
+  // เรียกใช้:
+  print(say('Bob', 'Howdy?')); // Bob says Howdy?
+  print(say('Alice', 'Hi!', 'smartphone')); // Alice says Hi! with a smartphone
+}
