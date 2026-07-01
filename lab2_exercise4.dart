@@ -3,10 +3,11 @@ void main(){
   String city = 'Nakhon Sawan';
 
   int length = middleName?.length ?? 0;
-  print('Length (??): $length');
+  print('Length middleName : $length');
 
-  print(city.length);
+  print('Length city :${city.length}');
 
+  print('ก่อนกำหนดค่าmiddleName : $middleName');
   middleName ??= 'N/A';
-  print(middleName);
+  print('หลังกำหนดค่าmiddleName : $middleName');
 }
