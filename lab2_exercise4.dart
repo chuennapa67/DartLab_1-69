@@ -6,4 +6,7 @@ void main(){
   print('Length (??): $length');
 
   print(city.length);
+
+  middleName ??= 'N/A';
+  print(middleName);
 }
