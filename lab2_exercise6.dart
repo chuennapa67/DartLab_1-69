@@ -1,16 +1,20 @@
-void executeOperation(int a, int b, int Function(int, int) operation) {
-  var result = operation(a, b);
-  print('Result: $result');
+void areaTriangle(int base,int heigth) {
+  var result = 0.5*base*heigth;
+  print('พื้นที่สามเหลี่ยม: $result');
 }
-
-int subtract(int x, int y) {
-  return x - y;
+void areaRectangle(int width, int length) {
+  var result = width  *length;
+  print('พื้นที่สีเหลี่ยมผืนผ้า: $result');
+}
+void areaCylinder(int radius, int height) {
+  var result = 2 * 3.14 * radius * (radius + height);
+  print('พื้นที่ทรงกระบอก: $result');
+  var volume = 3.14 * radius * radius * height;
+  print('ปริมาตรทรงกระบอก: $volume');
 }
 
 void main() {
-  //executeOperation(10, 5, add); // ส่งฟังก์ชัน add เข้าไป Result: 15
-  executeOperation(10, 5, subtract); // ส่งฟังก์ชัน subtract เข้าไป Result: 5
-
-  // Anonymous function (ฟังก์ชันไม่มีชื่อ)
-  executeOperation(10, 5, (x, y) => x * y); // Result: 50
+  areaTriangle(5,10);
+  areaRectangle(5,10);
+  areaCylinder(5,10);
 }
